@@ -13,7 +13,7 @@
 		48CD11312640D25E00A0051B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CD112F2640D25E00A0051B /* Main.storyboard */; };
 		48CD11332640D25E00A0051B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48CD11322640D25E00A0051B /* Assets.xcassets */; };
 		48CD11362640D25E00A0051B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CD11342640D25E00A0051B /* LaunchScreen.storyboard */; };
-		48CD11462641201700A0051B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CD11452641201700A0051B /* SecondViewController.swift */; };
+		48CD11462641201700A0051B /* NewSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CD11452641201700A0051B /* NewSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		48CD11322640D25E00A0051B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48CD11352640D25E00A0051B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48CD11372640D25E00A0051B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		48CD11452641201700A0051B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		48CD11452641201700A0051B /* NewSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				48CD11322640D25E00A0051B /* Assets.xcassets */,
 				48CD11342640D25E00A0051B /* LaunchScreen.storyboard */,
 				48CD11372640D25E00A0051B /* Info.plist */,
-				48CD11452641201700A0051B /* SecondViewController.swift */,
+				48CD11452641201700A0051B /* NewSegue.swift */,
 			);
 			path = Chapter04;
 			sourceTree = "<group>";
@@ -140,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48CD11462641201700A0051B /* SecondViewController.swift in Sources */,
+				48CD11462641201700A0051B /* NewSegue.swift in Sources */,
 				48CD112E2640D25E00A0051B /* ViewController.swift in Sources */,
 				48CD112A2640D25E00A0051B /* AppDelegate.swift in Sources */,
 				48CD112C2640D25E00A0051B /* SceneDelegate.swift in Sources */,
