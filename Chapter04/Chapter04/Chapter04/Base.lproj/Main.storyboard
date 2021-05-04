@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZIC-5s-8zr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oTh-sH-ELf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,73 +8,121 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="imm-bn-rMk">
+        <!--첫 페이지-->
+        <scene sceneID="SKu-On-OaB">
             <objects>
-                <viewController id="ZIC-5s-8zr" customClass="ViewController" customModule="Chapter04" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="l6g-tG-up8">
+                <viewController id="o7W-yE-FUR" customClass="ViewController" customModule="Chapter04" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r1Q-2D-ZPo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0x-Jh-kLL">
-                                <rect key="frame" x="186" y="265" width="50" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="첫 페이지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mh3-o8-bCm">
+                                <rect key="frame" x="40" y="309" width="335" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5e-4t-z9W">
-                                <rect key="frame" x="124" y="413" width="167" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Wind Button"/>
-                                <connections>
-                                    <action selector="wind:" destination="ZIC-5s-8zr" eventType="touchUpInside" id="vfB-xh-guo"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="FqT-hV-YC1"/>
+                        <viewLayoutGuide key="safeArea" id="p7z-D1-SAl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <connections>
-                        <segue destination="NHo-2Q-gZN" kind="presentation" identifier="ManualWind" modalTransitionStyle="coverVertical" id="xag-c6-Ddw"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="첫 페이지" id="Gzf-PC-gC2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="Q2C-w1-pzH">
+                            <connections>
+                                <segue destination="BoR-8a-5Eg" kind="show" id="GY0-as-RP1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1rT-RZ-MNn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bDe-m1-GCK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1586.9565217391305" y="16.741071428571427"/>
+            <point key="canvasLocation" x="781.15942028985512" y="28.794642857142854"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="zLg-dT-LOJ">
+        <!--두번째 페이지-->
+        <scene sceneID="3Cl-hi-uap">
             <objects>
-                <viewController id="NHo-2Q-gZN" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7Ll-Qu-n6I">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                <viewController id="BoR-8a-5Eg" customClass="ViewController" customModule="Chapter04" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dlo-yK-ZJ3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7U-1h-Xhr">
-                                <rect key="frame" x="186" y="265" width="49" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDC-R7-bky">
-                                <rect key="frame" x="147" y="403" width="121" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Unwind"/>
-                                <connections>
-                                    <segue destination="2gV-gv-3uN" kind="unwind" unwindAction="unwindToVC:" id="AKa-mx-pxr"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="fvn-BT-ugf"/>
+                        <viewLayoutGuide key="safeArea" id="ltH-mQ-Ln1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="두번째 페이지" id="3Eu-0h-ZXh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="oFA-Oc-F5H">
+                            <connections>
+                                <segue destination="tKy-Z4-VMs" kind="show" id="fE3-Eq-InE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PPC-7l-zrw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="2gV-gv-3uN" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Et2-7d-dSd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2298.5507246376815" y="16.741071428571427"/>
+            <point key="canvasLocation" x="1530" y="29"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7w1-Yf-u5C">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oTh-sH-ELf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lcg-Nm-4Ja">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="o7W-yE-FUR" kind="relationship" relationship="rootViewController" id="DT2-vq-nOQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Zi-nl-Dco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-128.98550724637681" y="28.794642857142854"/>
+        </scene>
+        <!--세번째 페이지-->
+        <scene sceneID="GzU-Xf-B9P">
+            <objects>
+                <viewController id="tKy-Z4-VMs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="74D-T3-MbI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Se5-lJ-HHS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="세번째 페이지" id="t3u-Jq-SyV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="YB7-84-vQG">
+                            <connections>
+                                <segue destination="dq3-MF-Jvn" kind="show" id="hOL-aR-t3j"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qIb-si-nex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2325" y="29"/>
+        </scene>
+        <!--네번째 페이지-->
+        <scene sceneID="7h2-fO-aWu">
+            <objects>
+                <viewController id="dq3-MF-Jvn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8OQ-sm-jbQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6wn-1n-Glb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="네번째 페이지" id="iMa-oi-04L">
+                        <barButtonItem key="rightBarButtonItem" title="Home" id="2Xh-1k-Uam">
+                            <connections>
+                                <segue destination="Q40-e1-Roc" kind="unwind" unwindAction="gotoPage1:" id="tFb-tr-R7Z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J4C-Uz-3ZS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Q40-e1-Roc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3104" y="29"/>
         </scene>
     </scenes>
     <resources>

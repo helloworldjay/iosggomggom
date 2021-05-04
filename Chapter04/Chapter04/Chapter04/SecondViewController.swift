@@ -9,6 +9,8 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    
+    @IBAction func gotoPage2(_ sender: UIStoryboardSegue) {
+        
+    }
     
 }

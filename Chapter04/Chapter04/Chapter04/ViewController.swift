@@ -13,16 +13,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func wind(_ sender: Any) {
-        self.performSegue(withIdentifier: "ManualWind", sender: self)
-    }
     
-    @IBAction func unwindToVC(_ segue: UIStoryboardSegue) {
+    @IBAction func gotoPage1(_ sender: UIStoryboardSegue) {
         
     }
-    
-    
+
+   
     
 }
 
