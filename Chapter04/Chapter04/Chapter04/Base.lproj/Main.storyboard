@@ -36,7 +36,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <segue destination="NHo-2Q-gZN" kind="presentation" identifier="ManualWind" modalTransitionStyle="crossDissolve" id="xag-c6-Ddw"/>
+                        <segue destination="NHo-2Q-gZN" kind="presentation" identifier="ManualWind" modalTransitionStyle="coverVertical" id="xag-c6-Ddw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rT-RZ-MNn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -58,14 +58,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDC-R7-bky">
+                                <rect key="frame" x="147" y="403" width="121" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Unwind"/>
+                                <connections>
+                                    <segue destination="2gV-gv-3uN" kind="unwind" unwindAction="unwindToVC:" id="AKa-mx-pxr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fvn-BT-ugf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPC-7l-zrw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2gV-gv-3uN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2299" y="17"/>
+            <point key="canvasLocation" x="2298.5507246376815" y="16.741071428571427"/>
         </scene>
     </scenes>
     <resources>

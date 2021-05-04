@@ -18,6 +18,10 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "ManualWind", sender: self)
     }
     
+    @IBAction func unwindToVC(_ segue: UIStoryboardSegue) {
+        
+    }
+    
     
     
 }
