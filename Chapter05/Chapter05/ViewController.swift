@@ -20,13 +20,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let dest = segue.destination
-//        guard let rvc = dest as? ResultViewController else { return }
-//        rvc.paramEmail = self.email.text!
-//        rvc.paramUpdate = self.isUpdate.isOn
-//        rvc.paramInterval = self.interval.value
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination
+        guard let rvc = dest as? ResultViewController else { return }
+        rvc.paramEmail = self.email.text!
+        rvc.paramUpdate = self.isUpdate.isOn
+        rvc.paramInterval = self.interval.value
+    }
     
     @IBAction func onSwitch(_ sender: UISwitch) {
         if (sender.isOn == true) {
