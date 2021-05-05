@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gCZ-UH-Les">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Setting-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chapter05" customModuleProvider="target" sceneMemberID="viewController">
@@ -64,14 +64,6 @@
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tum-Fo-eip">
-                                <rect key="frame" x="183" y="483" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <action selector="onSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u8l-h4-qSM"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="자동갱신" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8A-31-SB0">
                                 <rect key="frame" x="155" y="252" width="45" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -83,17 +75,25 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Setting" id="PN2-bt-ZqU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="n0B-og-4Hn">
+                            <connections>
+                                <action selector="onPerformSegue:" destination="BYZ-38-t0r" id="iU2-TF-weh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="email" destination="oGG-1N-q2B" id="WTK-qX-R9Q"/>
                         <outlet property="interval" destination="R0k-9P-NWu" id="VEe-Df-eeZ"/>
                         <outlet property="intervalText" destination="Tmo-nl-tld" id="2Nb-Cc-jFf"/>
                         <outlet property="isUpdate" destination="WWt-zu-JzV" id="rQL-dP-iLT"/>
                         <outlet property="isUpdateText" destination="J8A-31-SB0" id="lCV-g7-Gtz"/>
+                        <segue destination="414-zf-iS0" kind="show" identifier="ManualSubmit" id="emV-3Y-Yxt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-204.34782608695653" y="88.858695652173921"/>
+            <point key="canvasLocation" x="702.89855072463774" y="88.858695652173921"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="tI9-34-zSJ">
@@ -157,6 +157,7 @@
                         <viewLayoutGuide key="safeArea" id="1oC-wb-yTw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="nrQ-Dw-SeO"/>
                     <connections>
                         <outlet property="resultEmail" destination="huh-wU-2ao" id="tJA-fq-HMu"/>
                         <outlet property="resultInterval" destination="ktV-Ki-6Sp" id="Plg-Hf-11t"/>
@@ -165,7 +166,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upO-Ip-cqR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556.52173913043487" y="88.858695652173921"/>
+            <point key="canvasLocation" x="1463.768115942029" y="88.858695652173921"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="giM-QE-z5g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gCZ-UH-Les" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Yp-Nu-HEa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="C9L-KD-OxR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hg2-6k-BYY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-204.34782608695653" y="88.858695652173921"/>
         </scene>
     </scenes>
     <resources>
