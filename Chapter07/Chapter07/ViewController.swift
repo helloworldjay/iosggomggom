@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet var imgView: UIImageView!
     
@@ -24,7 +24,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         self.present(picker, animated: false)
     }
-    
+}
+
+// MARK:- 이미지 피커 컨트롤러 델리게이트 메소드
+extension ViewController: UIImagePickerControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: false) { () in
             let alert = UIAlertController(title:"", message: "이미지 선택 취소", preferredStyle: .alert)
@@ -40,6 +43,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.imgView.image = img
         }
     }
+}
+
+// MARK:- 네비게이션 컨트롤러 델리게이트 메소드
+extension ViewController: UINavigationControllerDelegate {
     
 }
 
