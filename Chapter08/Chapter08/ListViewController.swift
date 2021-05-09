@@ -15,7 +15,6 @@ class ListViewController: UITableViewController {
         ("말할 수 없는 비밀", "여기서 너까지 다섯 걸음", "2015-05-07", 9.19)
     ]
     
-    
     lazy var list: [MovieVO] = {
         var datalist = [MovieVO]()
         for (title, desc, opendate, rating) in self.dataset {
@@ -29,4 +28,24 @@ class ListViewController: UITableViewController {
         }
         return datalist
     }()
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.list.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let row = self.list[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell")!
+        cell.textLabel?.text = row.title
+        
+        cell.detailTextLabel?.text = row.description
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        NSLog("선택된 행은 \(indexPath.row) 번째 행입니다.")
+    }
+    
 }

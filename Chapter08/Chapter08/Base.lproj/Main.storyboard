@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sf5-g9-RD4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WSr-W5-1ys">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List View Controller-->
+        <!--영화 정보-->
         <scene sceneID="fav-d0-AqL">
             <objects>
                 <tableViewController id="Sf5-g9-RD4" customClass="ListViewController" customModule="Chapter08" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,18 +15,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="uHX-8l-Xwo">
+                            <rect key="frame" x="0.0" y="111.5" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ListCell" textLabel="axs-t4-enm" style="IBUITableViewCellStyleDefault" id="Ada-p4-Jgk">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ListCell" textLabel="axs-t4-enm" detailTextLabel="ec8-Qn-tcV" style="IBUITableViewCellStyleSubtitle" id="Ada-p4-Jgk">
+                                <rect key="frame" x="0.0" y="28" width="375" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ada-p4-Jgk" id="FR9-Ly-5hj">
-                                    <rect key="frame" x="0.0" y="0.0" width="348" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="axs-t4-enm">
-                                            <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                            <rect key="frame" x="16" y="10" width="33" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ec8-Qn-tcV">
+                                            <rect key="frame" x="16" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -39,10 +51,29 @@
                             <outlet property="delegate" destination="Sf5-g9-RD4" id="sKN-pe-ufT"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="영화 정보" id="8kg-aX-X5y"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S5r-hx-6Nv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-50" y="88"/>
+            <point key="canvasLocation" x="888.79999999999995" y="87.706146926536732"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zoJ-6C-kPa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WSr-W5-1ys" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ua3-Ew-juf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Sf5-g9-RD4" kind="relationship" relationship="rootViewController" id="yZz-q4-NYb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6L-aW-vZ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50.399999999999999" y="87.706146926536732"/>
         </scene>
     </scenes>
     <resources>
