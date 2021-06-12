@@ -20,3 +20,4 @@ class MovieVO {
   // 영화 썸네일 이미지를 담을 UIImage 객체를 추가한다
   var thumbnailImage: UIImage?
 }
+

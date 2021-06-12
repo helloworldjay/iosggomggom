@@ -62,3 +62,6 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController: UITextFieldDelegate {
+    self.email.delegate = self
+}

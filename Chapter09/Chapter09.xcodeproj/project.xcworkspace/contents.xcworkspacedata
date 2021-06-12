@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MyMovieChart.xcodeproj">
+      location = "self:/Users/seungjinbaek/Documents/iOS/ggomggom/Chapter09/Chapter09.xcodeproj">
    </FileRef>
 </Workspace>
